@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import 'devextreme/dist/css/dx.common.css';
+import 'devextreme/dist/css/dx.light.css';
 import './App.css';
+import './css/index.css'
+import Button from 'devextreme-react/button'
+import MyCalendar from './Components/Calendar';
 
 function App() {
+
+  const handleClick = () => {
+    console.log('Button Clicked')
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div
+
+      >
+        <h1>Scheduler App</h1>
+        <MyCalendar />
+        <Button 
+          text="Click Me"
+          onClick={handleClick}
+        />
+      </div>
     </div>
   );
 }
