@@ -5,11 +5,12 @@ import { employees, data } from '../_calendarComponents/data'
 import { DataCell } from '../_calendarComponents/DataCell'
 import { ResourceCell } from '../_calendarComponents/ResourceCell'
 
-const currentDate = new Date(2022, 5, 2, 11, 30);
+const currentDate = Date.now();
 const groups = ['employeeID']
 const views = ['day', 'week', 'month']
 
 export default function MyCalendar() {
+
   return (
     <Scheduler
         timeZone='America/New_York'

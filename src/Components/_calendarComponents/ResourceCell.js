@@ -2,8 +2,10 @@ import React from 'react'
 
 export const ResourceCell = (props) => {
   
-    const { data: {color, text, data: { avatar, age, disipline } } }  = props
+    const { data: {color, text} }  = props
 
+    const {avatar, age, discipline} = props.data.data
+    console.log("props: ", props.data.data.discipline)
 
     return (
         <div className='dx-template-wrapper'>
@@ -16,7 +18,7 @@ export const ResourceCell = (props) => {
             <div className='info' style={{color}}>
                 Age: {age}
                 <br />
-                <b>{disipline}</b>
+                Discipline: <b>{discipline}</b>
             </div>
         </div>
       )
